@@ -1,5 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;700&display=swap');
+
+*{
+    font-family: 'Noto Sans', sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
+
 #content{
     height: 100vh;
     display: grid;
-    grid-template-rows: 200px 1fr 100px;
+    grid-template-rows: 15% 80% 5%;
+}
+.header, .footer{
+    background-color: #18181b;
+}
+
+.header{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.restaurant-title{
+    font-size: 2em;
+    font-weight: bold;
+    color: #facc15;
+}
+
+.header>ul{
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+ul>li>a{
+    padding: 5px 15px;
+}
+
+li>a{
+    color: white;
+    font-size: 1.5em;
+}
+
+li>a:link{
+    text-decoration: none;
+}
+
+li>a:visited{
+    text-decoration: none;
+}
+
+li>a:hover{
+    text-decoration: none;
+    font-weight: bold;
+    color: #eab308;
+}
+
+li>a:active{
+    text-decoration: none;
+}
+
+.main{
+    position: relative; 
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main::before {    
+    content: "";
+    background-image: url('./pexels-ivan-samkov-8951297.jpg');
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.9;
+}
+
+.main-content{
+    position: relative;
+    color: #ffffff;  
+    text-align: center;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.main-content::before{
+    content: "";
+    position: absolute;
+    background-color: #18181b;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.5;
+}
+
+.main-content>*{
+    width: 80%;
+    position: relative;
+}
+
+.main-content>.about{
+    font-style: italic;
+}
+
+.about>.yellow{
+    color: #eab308;
+    font-size: 3em;
+}
+
+.reviews>.yellow{
+    font-size: 2em;
+    margin-bottom: 15px;
+    font-weight: bolder;
+    color: #eec344;
+    opacity: 0.85;
+}
+
+.reviews>p{
+    font-size: 1.3em;
+}
+
+.reviews>:nth-child(3){
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+@media only screen and (max-width: 800px) {
+    .restaurant-title{
+        font-size: 1.5em;
+    }
+
+    .main-content{
+        width: 90%;
+        height: 90%;
+    }
+
+    .about>.yellow{
+        font-size: 1em;
+    }
+
+    .reviews>.yellow{
+        font-size: 1.2em;
+        margin-bottom: 5px;
+    }
+    
+    .reviews>p{
+        font-size: 0.9em;
+    }
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer>.footer-text{
+    color: white;
+    font-size: .9em;
+    display: flex;
+    align-items: center;
+}
+
+.github-logo{
+    width: 1.5em;
+    height: auto;
+    padding: 0px 10px;
 }
