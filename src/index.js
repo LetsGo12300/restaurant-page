@@ -1,12 +1,17 @@
+import setInitialTemplate, {clearMainContent} from "./templates";
+import addHomepage from "./home";
 import './styles.css';
-import githubLogo from './GitHub-Mark-Light-64px.png';
 
+setInitialTemplate();
+addHomepage();
 
+const tabLinks = Array.from(document.querySelectorAll('.tab-link'));
 
-let logo = document.getElementById('logo');
-
-const myIcon = new Image();
-myIcon.src = githubLogo;
-myIcon.className = 'github-logo';
-
-logo.appendChild(myIcon);
+tabLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        if (tabLinks.indexOf(link) === 0){
+            clearMainContent();
+            addHomepage();
+        }
+    });
+});
