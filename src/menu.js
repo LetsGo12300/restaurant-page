@@ -19,6 +19,7 @@ function createMenu(title, description, price){
     const menuItem = document.createElement('div');
     const menuSet = document.createElement('h3');
     menuSet.textContent = title;
+    menuSet.classList.add('yellow-font');
     menuItem.appendChild(menuSet);
      
     const menuDescription = document.createElement('div');

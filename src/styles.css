@@ -184,3 +184,7 @@ li>a:active{
     height: auto;
     padding: 0px 10px;
 }
+
+.yellow-font{
+    color: #eab308;
+}
