@@ -147,6 +147,10 @@ li>a:active{
         height: 90%;
     }
 
+    .main-content>h2{
+        display: none;
+    }
+
     .about>.yellow{
         font-size: 1em;
     }
@@ -155,7 +159,7 @@ li>a:active{
         font-size: 1.2em;
         margin-bottom: 5px;
     }
-    
+
     .reviews>p{
         font-size: 0.9em;
     }

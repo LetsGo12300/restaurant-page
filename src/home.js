@@ -1,5 +1,4 @@
 function addHomepage(){
-    let content = document.getElementById('content');
     let mainContent = document.querySelector('.main-content');
     
     const about = document.createElement('div');
